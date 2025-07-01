@@ -84,7 +84,7 @@ export default function ChatInterface() {
         console.error("Failed to load chat history from localStorage:", e);
         localStorage.removeItem(LOCAL_STORAGE_KEY); // Clear corrupted data
     }
-    setMessages([{ role: 'assistant', content: 'Welcome to the Plantz Agent.' }]);
+    setMessages([{ role: 'assistant', content: 'Welcome to Holiday Home. How can I help you?' }]);
     isFirstUserMessage.current = true; // Reset flag on component mount
   }, []);
 
@@ -353,32 +353,6 @@ export default function ChatInterface() {
       <div className={styles.header}>
         <h2>Holiday Home</h2>
         <div className="flex items-center space-x-2">
-          {/* Mode Dropdown */}
-          <div className="relative mode-dropdown">
-            <button
-              onClick={() => setShowModeDropdown(!showModeDropdown)}
-              className="flex items-center space-x-1 text-white/80 hover:text-white px-2 py-1 rounded text-sm"
-            >
-              <span>{mode === 'strains' ? 'Strains' : 'Doctors'}</span>
-              <FiChevronDown size={14} />
-            </button>
-            {showModeDropdown && (
-              <div className="absolute top-full left-0 mt-1 bg-white border border-gray-200 rounded shadow-lg z-10 min-w-[120px]">
-                <button
-                  onClick={() => handleModeChange('strains')}
-                  className={`w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${mode === 'strains' ? 'bg-gray-100 font-medium' : ''}`}
-                >
-                  Strains
-                </button>
-                <button
-                  onClick={() => handleModeChange('doctors')}
-                  className={`w-full text-left px-3 py-2 text-sm hover:bg-gray-100 ${mode === 'doctors' ? 'bg-gray-100 font-medium' : ''}`}
-                >
-                  Doctors
-                </button>
-              </div>
-            )}
-          </div>
           <button onClick={handleNewChat} title="New Chat" className="text-white/80 hover:text-white p-1.5 rounded">
             <FiPlusCircle size={20} />
           </button>
@@ -495,7 +469,7 @@ export default function ChatInterface() {
           </button>
         </form>
         <div className="text-center text-xs text-gray-400 mt-2">
-          Powered by <a href="https://plantz.io" target="_blank" rel="noopener noreferrer" className="hover:underline">Plantz</a>
+          Powered by <a href="https://millionmedia.com" target="_blank" rel="noopener noreferrer" className="hover:underline">Million Media</a>
         </div>
       </div>
     </div>
