@@ -351,7 +351,7 @@ export default function ChatInterface() {
     <div className={styles.chatContainer}>
       {/* Header */}
       <div className={styles.header}>
-        <h2>Plantz Agent</h2>
+        <h2>Holiday Home</h2>
         <div className="flex items-center space-x-2">
           {/* Mode Dropdown */}
           <div className="relative mode-dropdown">
